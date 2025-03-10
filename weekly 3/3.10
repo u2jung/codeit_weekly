@@ -15,3 +15,16 @@ HAVING
 --- 
 
 # 데이터베이스에서 NULL 값이란 무엇인가요? NULL 값을 처리하는 함수는 무엇이 있나요?
+데이터베이스에서 NULL 값이란?
+- 값이 존재하지 않음을 의미
+- 0, 문자열(''), 공백('')과는 다르다
+- 어떤 값과도 같지않다
+- NULL 과의 모든 연산결과는 NULL
+- 비교 연산에 NULL을 사용하면 UNKKNOW결과가 나옴
+- 특정 조건을 만족하는 NULL값을 찾을 때는 ISNULL 또는 IS NOT NULL을 사용
+
+NULL 값을 처리하는 함수
+1. COALESCE() - null값을 다른 값으로 대체
+2. IFNULL() mysql전용 - 두개의 인자만 받는 mysal전용함수
+3. NULLIF() - 두 개의 값이 같으면 NULL을 반환하고 다르면 첫번째값을 반환
+4. IS NULL()/ IS NOT NULL() 
